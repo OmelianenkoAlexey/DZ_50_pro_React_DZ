@@ -6,14 +6,15 @@ import { styled, Box } from "@mui/material";
        
         width: "100vw",
         height: "200px",
-        backgroundColor: "yellow",
+        backgroundColor: "blue",
+        color: "white",
+        fontSize: "50px",
     }));
 
 export default function Header() {
     return (
         // <Grid container spacing={4}></Grid>
-        <MainWrapperFooter>
-
+        <MainWrapperFooter> FOOTER
         </MainWrapperFooter>
     )
 }

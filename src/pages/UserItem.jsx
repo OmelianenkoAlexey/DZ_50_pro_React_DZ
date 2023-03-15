@@ -1,17 +1,7 @@
 import React, { useState } from "react";
 
-// это глобальный импорт
-// import Card from '@mui/material/Card';
-// import CardActions from '@mui/material/CardActions';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Button from '@mui/material/Button';
-// import Typography from '@mui/material/Typography';
-// import { Box } from "@mui/system";
-
-// это локальный импорт
 import { Grid, Card, CardActions, CardContent, CardMedia, Button, Typography, styled, Box } from "@mui/material";
-// { user, id, handleButtonClick }
+
 // export default function UserItem(props) {
 // делаем деструктуризацию
 export default function UserItem({ user, id, ButtonStartQuiz }) {
@@ -23,11 +13,13 @@ export default function UserItem({ user, id, ButtonStartQuiz }) {
         console.log("ok");
     };
 
-    // return принимает ТОЛЬКО один ТЕГ
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ width: 300 }}>
             <CardMedia
-                sx={{ height: 140 }}
+                sx={{
+                    height: 140,
+                    width: 100
+                }}
                 image={user.avatar}
                 title={user.firstName}
             />
@@ -42,20 +34,19 @@ export default function UserItem({ user, id, ButtonStartQuiz }) {
             <CardActions>
                 <Button size="small" onClick={ButtonStartQuiz}>Start quiz</Button>
                 <Button size="small" onClick={handleShowModel}>Show More</Button>
-
-
             </CardActions>
+            
             {showModal
                 && <div style={{
-                    width: "100%",
-                    height: "200px",
-                    backgroundColor: "red",
+                    width: "90%",
+                    height: "auto",
+                    backgroundColor: "grey",
                     color: "white",
-                    fontSize: "25px",
+                    fontSize: "20px",
                     padding: "10px"
                 }}>
-                    
-                    Here is Modal
+                    <div style={{
+                    }}> {user.description}</div>
                 </div>
             }
         </Card>

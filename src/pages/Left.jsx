@@ -7,13 +7,14 @@ import { styled, Box } from "@mui/material";
         width: "20%",
         height: "auto",
         backgroundColor: "green",
+        color: "white",
+        fontSize: "50px",
     }));
 
 export default function Left() {
     return (
         // <Grid container spacing={4}></Grid>
-        <MainWrapperLeft>
-
+        <MainWrapperLeft>LEFT
         </MainWrapperLeft>
     )
 }
