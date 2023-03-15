@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // это глобальный импорт
 // import Card from '@mui/material/Card';
@@ -14,16 +14,17 @@ import { Grid, Card, CardActions, CardContent, CardMedia, Button, Typography, st
 // { user, id, handleButtonClick }
 // export default function UserItem(props) {
 // делаем деструктуризацию
-    export default function UserItem({ user, id, handleButtonClick  }) {
+export default function UserItem({ user, id, ButtonStartQuiz }) {
 
+    let [showModal, setshowModal] = useState(false);
 
-    
+    const handleShowModel = () => {
+        setshowModal(!showModal)
+        console.log("ok");
+    };
+
     // return принимает ТОЛЬКО один ТЕГ
     return (
-        // <p>{user.firstName}</p>
-
-        // <p>TEST</p>
-
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
                 sx={{ height: 140 }}
@@ -39,9 +40,24 @@ import { Grid, Card, CardActions, CardContent, CardMedia, Button, Typography, st
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" onClick={handleButtonClick}>Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small" onClick={ButtonStartQuiz}>Start quiz</Button>
+                <Button size="small" onClick={handleShowModel}>Show More</Button>
+
+
             </CardActions>
+            {showModal
+                && <div style={{
+                    width: "100%",
+                    height: "200px",
+                    backgroundColor: "red",
+                    color: "white",
+                    fontSize: "25px",
+                    padding: "10px"
+                }}>
+                    
+                    Here is Modal
+                </div>
+            }
         </Card>
     )
 }

@@ -41,73 +41,14 @@ function App() {
     <div className="App">
 
       <Header />
-      
+
       <div className='container'>
         <Left />
         <UsersList />
       </div>
-
+      
       <Footer />
 
-
-      {/*  <p>Counter:</p>
-      <p>
-        <b>{counter}</b>
-      </p>
-      <button onClick={hadleClickCounter}>Click to me</button>
-      <button onClick={hadleShowModel}>Show Modal</button>
-
-      {
-        showModal
-          ? <div style={{
-            width: "100px",
-            height: "100px",
-            backgroundColor: "yellow",
-          }}>
-            Here is Modal
-          </div>
-          : <div style={{
-            width: "100px",
-            height: "100px",
-            backgroundColor: "blue",
-          }}>
-            Here is Modal
-          </div>
-      }
-
-      {
-        showModal
-        && <div style={{
-          width: "200px",
-          height: "200px",
-          backgroundColor: "red",
-          color: "white",
-          fontSize: "25px",
-        }}>
-          Here is Modal
-        </div>
-      }
-
-      <div style={someStyles}>
-        Here is Modal
-      </div> */}
-
-
-
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
     </div>
   );
 }

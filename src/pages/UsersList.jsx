@@ -28,6 +28,11 @@ const MainWrapperMain = styled(Box)(() => ({
 export default function UsersList() {
     let [users, setUsers] = useState([]);
     let [counter, setcounter] = useState(0);
+
+
+
+
+
     useEffect(() => {
         (async () => {
             // const response = await axios.get("https://63f0c7635b7cf4107e26a8c8.mockapi.io/react");
@@ -42,10 +47,18 @@ export default function UsersList() {
     }, []);
     // }, [counter]);
 
-    const handleSetCounter = () => {
-        setcounter(++counter);
-        console.log(counter);
+    // const handleSetCounter = () => {
+    //     setcounter(++counter);
+    //     console.log(counter);
+    // }
+
+    const startQuiz = () => {
+        console.log("Quiz started");
+        alert("Quiz started")
     }
+
+
+
 
 
     // const fetchUserData = async () => {
@@ -63,13 +76,14 @@ export default function UsersList() {
 
             {users.map((user, index) => (
                 <UserItem
-                key={index}
-                user={user}
-                id={index}
-                handleButtonClick={handleSetCounter}/>
+                    key={index}
+                    user={user}
+                    id={index}
+                    ButtonStartQuiz={startQuiz}
+                />
             ))}
 
-            
+
         </MainWrapperMain>
     )
 }
