@@ -4,7 +4,8 @@ import { styled, Box } from "@mui/material";
 
 const MainWrapperLeft = styled(Box)(() => ({
 
-    width: "20%",
+    width: "20vw",
+    minWidth: "300px",
     height: "auto",
     backgroundColor: "green",
     color: "white",
@@ -16,7 +17,7 @@ const MainWrapperLeft = styled(Box)(() => ({
 export default function Left() {
     return (
         <MainWrapperLeft>
-            LEFT
+           <h3>LEFT</h3> 
         </MainWrapperLeft>
     )
 }

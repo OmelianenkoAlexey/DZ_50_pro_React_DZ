@@ -5,7 +5,7 @@ import { styled, Box } from "@mui/material";
 const MainWrapperHeader = styled(Box)(() => ({
 
     width: "100vw",
-    height: "200px",
+    height: "150px",
     backgroundColor: "red",
     color: "white",
     fontSize: "50px",
@@ -16,7 +16,7 @@ const MainWrapperHeader = styled(Box)(() => ({
 export default function Header() {
     return (
         <MainWrapperHeader>
-            HEADER
+          <h3>HEADER</h3>  
         </MainWrapperHeader>
     )
 }

@@ -5,7 +5,7 @@ import { styled, Box } from "@mui/material";
 const MainWrapperFooter = styled(Box)(() => ({
 
     width: "100vw",
-    height: "200px",
+    height: "150px",
     backgroundColor: "blue",
     color: "white",
     fontSize: "50px",
@@ -16,7 +16,7 @@ const MainWrapperFooter = styled(Box)(() => ({
 export default function Header() {
     return (
         <MainWrapperFooter>
-            FOOTER
+           <h3>FOOTER</h3> 
         </MainWrapperFooter>
     )
 }

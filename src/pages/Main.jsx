@@ -5,7 +5,7 @@ import UsersList from "./UsersList";
 
 const MainWrapperMain = styled(Box)(() => ({
 
-    width: "80%",
+    width: "80vw",
     height: "auto",
     backgroundColor: "grey",
     color: "white",
