@@ -2,8 +2,9 @@ import { useState } from 'react';
 import './App.css';
 import Header from './pages/Header';
 import Left from './pages/Left';
-import UsersList from './pages/UsersList';
+// import UsersList from './pages/UsersList';
 import Footer from './pages/Footer';
+import Main from './pages/Main';
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
 
       <div className='container'>
         <Left />
-        <UsersList />
+        <Main />
       </div>
       
       <Footer />

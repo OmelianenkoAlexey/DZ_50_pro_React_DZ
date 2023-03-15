@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 import { Grid, Card, CardActions, CardContent, CardMedia, Button, Typography, styled, Box } from "@mui/material";
-
+import "./UserItem.css"
 // export default function UserItem(props) {
 // делаем деструктуризацию
+
 export default function UserItem({ user, id, ButtonStartQuiz }) {
 
     let [showModal, setshowModal] = useState(false);
@@ -14,11 +15,11 @@ export default function UserItem({ user, id, ButtonStartQuiz }) {
     };
 
     return (
-        <Card sx={{ width: 300 }}>
+        <Card className="card" sx={{ width: 300 }}>
             <CardMedia
                 sx={{
                     height: 140,
-                    width: 100
+                    width: 150
                 }}
                 image={user.avatar}
                 title={user.firstName}
@@ -35,15 +36,16 @@ export default function UserItem({ user, id, ButtonStartQuiz }) {
                 <Button size="small" onClick={ButtonStartQuiz}>Start quiz</Button>
                 <Button size="small" onClick={handleShowModel}>Show More</Button>
             </CardActions>
-            
+
             {showModal
                 && <div style={{
-                    width: "90%",
+                    width: "280",
                     height: "auto",
                     backgroundColor: "grey",
                     color: "white",
                     fontSize: "20px",
-                    padding: "10px"
+                    padding: "10px",
+                    margin: "10px"
                 }}>
                     <div style={{
                     }}> {user.description}</div>

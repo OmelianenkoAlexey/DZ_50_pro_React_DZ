@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import { Grid, Card, CardActions, CardContent, CardMedia, Button, Typography, styled, Box } from "@mui/material";
+import { styled, Box } from "@mui/material";
 import UserItem from "./UserItem";
 
-const MainWrapperMain = styled(Box)(() => ({
+const MainWrapperList = styled(Box)(() => ({
     display: "flex",
+    gap: "20px",
     flexWrap: "wrap",
-    width: "70%",
-    padding: "10px",
 }));
 
 export default function UsersList() {
     let [users, setUsers] = useState([]);
-    let [counter, setcounter] = useState(0);
 
     useEffect(() => {
         (async () => {
@@ -22,12 +20,6 @@ export default function UsersList() {
         })();
     }, []);
 
-
-    // const handleSetCounter = () => {
-    //     setcounter(++counter);
-    //     console.log(counter);
-    // }
-
     const startQuiz = () => {
         console.log("Quiz started");
         alert("Quiz started")
@@ -35,7 +27,7 @@ export default function UsersList() {
 
     return (
 
-        <MainWrapperMain>
+        <MainWrapperList>
             {users.map((user, index) => (
                 <UserItem
                     key={index}
@@ -44,6 +36,6 @@ export default function UsersList() {
                     ButtonStartQuiz={startQuiz}
                 />
             ))}
-        </MainWrapperMain>
+        </MainWrapperList>
     )
 }
