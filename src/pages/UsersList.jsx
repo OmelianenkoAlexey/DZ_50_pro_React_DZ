@@ -5,10 +5,10 @@ import { styled, Box } from "@mui/material";
 import UserItem from "./UserItem";
 
 const MainWrapperList = styled(Box)(() => ({
+    marginTop: "20px",
     display: "flex",
     gap: "20px",
     flexWrap: "wrap",
-    overflowY: "scroll",
 }));
 
 export default function UsersList() {
