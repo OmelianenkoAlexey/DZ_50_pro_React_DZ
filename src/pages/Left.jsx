@@ -15,7 +15,6 @@ const MainWrapperLeft = styled(Box)(() => ({
 
 export default function Left() {
     return (
-        // <Grid container spacing={4}></Grid>
         <MainWrapperLeft>
             LEFT
         </MainWrapperLeft>

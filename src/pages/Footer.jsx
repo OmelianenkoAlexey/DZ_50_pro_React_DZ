@@ -15,7 +15,6 @@ const MainWrapperFooter = styled(Box)(() => ({
 
 export default function Header() {
     return (
-        // <Grid container spacing={4}></Grid>
         <MainWrapperFooter>
             FOOTER
         </MainWrapperFooter>
