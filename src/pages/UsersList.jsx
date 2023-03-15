@@ -8,6 +8,7 @@ const MainWrapperList = styled(Box)(() => ({
     display: "flex",
     gap: "20px",
     flexWrap: "wrap",
+    overflowY: "scroll",
 }));
 
 export default function UsersList() {

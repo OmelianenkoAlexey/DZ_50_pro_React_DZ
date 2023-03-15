@@ -6,12 +6,13 @@ import UsersList from "./UsersList";
 const MainWrapperMain = styled(Box)(() => ({
 
     width: "80vw",
-    height: "auto",
+    maxHeight: "80vh",
     backgroundColor: "grey",
     color: "white",
     fontSize: "30px",
     padding: "20px",
     textAlign: "center",
+    overflowY: "scroll",
 }));
 
 export default function Main() {
